@@ -17,4 +17,13 @@ describe('getLetterCount - basic functionality', () => {
       expect(actual).to.deep.equal(expected);
     }
   );
+
+  // eslint-disable-next-line max-len
+  it('return the correct letter count for words with more than one of certian letters',
+    () => {
+      const expected = { m: 1, i: 4, s: 4, p: 2 };
+      const actual = getLetterCount('mississippi');
+      expect(actual).to.deep.equal(expected);
+    }
+  );
 });
